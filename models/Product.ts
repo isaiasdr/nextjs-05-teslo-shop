@@ -22,7 +22,8 @@ const productSchema = new Schema({
         enum: {
             values: [ 'shirts', 'pants', 'hoodies', 'hats' ],
             message: '[VALUE] no es un valor permitido'
-        }
+        },
+        default: 'shirts',
     },
     gender: { 
         type: String,
@@ -30,7 +31,8 @@ const productSchema = new Schema({
         enum: {
             values: [ 'men', 'women', 'kid', 'unisex' ],
             message: '[VALUE] no es un valor permitido'
-        }
+        },
+        default: 'unisex',
     },
 
     /* Agregar createdAt y updatedAt */

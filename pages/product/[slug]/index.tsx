@@ -21,7 +21,6 @@ const ProductPage: NextPage<Props> = ({ product }) => {
     const { push } = useRouter();
     const { cart, addProductToCart } = useContext(CartContext);
 
-
     const [ tempCartProduct, setTempCartProduct ] = useState<ICartProduct>({
         _id: product._id,
         image: product.images[0],

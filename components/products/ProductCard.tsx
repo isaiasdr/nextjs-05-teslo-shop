@@ -14,7 +14,7 @@ export const ProductCard: FC<Props> = ({ product }) => {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     const productImage = useMemo( () => {
-        return isHovered ? `products/${ product.images[1] }` : `products/${ product.images[0] }`;
+        return isHovered ? product.images[1] : product.images[0];
     }, [ isHovered, product.images ]);
 
     return (
@@ -41,7 +41,7 @@ export const ProductCard: FC<Props> = ({ product }) => {
                             <CardMedia
                                 className='fadeIn'
                                 component='img'
-                                image={ `/${productImage}` }
+                                image={ productImage }
                                 alt={ product.title }
                                 onLoad= { () => setIsImageLoaded(true) }
                             />
