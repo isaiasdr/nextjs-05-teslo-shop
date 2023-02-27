@@ -43,8 +43,8 @@ const ProductPage: NextPage<Props> = ({ product }) => {
     const onAddProduct = () => {
         if( !tempCartProduct.size ) return ;
 
-        addProductToCart( tempCartProduct );
-        push( '/cart' );        
+        addProductToCart( {...tempCartProduct} );
+        //push( '/cart' );        
     }
 
     return (
